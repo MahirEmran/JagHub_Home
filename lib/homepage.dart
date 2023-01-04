@@ -84,32 +84,27 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Align(
-                    alignment: AlignmentDirectional(-0.75, -0.35),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 45, 0, 0),
-                      child: Text(
-                        'Welcome Back',
-                        style: FlutterFlowTheme.of(context).subtitle2.override(
-                              fontFamily: 'Poppins',
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              fontSize: 17,
-                              fontWeight: FontWeight.w200,
-                            ),
-                      ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 40, 0, 0),
+                    child: Text(
+                      'Welcome Back',
+                      style: FlutterFlowTheme.of(context).subtitle2.override(
+                            fontFamily: 'Poppins',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w200,
+                            color: Colors.black,
+                          ),
                     ),
                   ),
-                  Align(
-                    alignment: AlignmentDirectional(0.45, 0.05),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 85, 0),
-                      child: Text(
-                        currentUser.name,
-                        style: FlutterFlowTheme.of(context).title1.override(
-                              fontFamily: 'Poppins',
-                              fontSize: 40,
-                            ),
-                      ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
+                    child: Text(
+                      currentUser.name,
+                      style: FlutterFlowTheme.of(context).title1.override(
+                            fontFamily: 'Poppins',
+                            fontSize: 34,
+                            color: Colors.black,
+                          ),
                     ),
                   ),
                   Align(
@@ -118,10 +113,10 @@ class _HomePageState extends State<HomePage> {
                       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 1.53,
                               height: 177,
@@ -139,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 35, 5, 0),
+                                        0, 45, 5, 0),
                                     child: FFButtonWidget(
                                       onPressed: () {
                                         print('Button pressed ...');
@@ -148,19 +143,17 @@ class _HomePageState extends State<HomePage> {
                                       icon: Icon(
                                         Icons.star_rounded,
                                         size: 30,
+                                        color: Colors.white,
                                       ),
                                       options: FFButtonOptions(
                                         elevation: 0,
                                         width: 130,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
+                                        color: Color.fromARGB(255, 75, 57, 239),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .title1
                                             .override(
                                               fontFamily: 'Poppins',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
+                                              color: Colors.white,
                                               fontSize: 55,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -189,8 +182,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 1.53,
                               height: 177,
@@ -199,8 +191,12 @@ class _HomePageState extends State<HomePage> {
                                 maxHeight: 177,
                               ),
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
+                                color: Color.fromARGB(
+                                  255,
+                                  241,
+                                  244,
+                                  248,
+                                ),
                                 borderRadius: BorderRadius.circular(34),
                               ),
                               child: SingleChildScrollView(
@@ -222,24 +218,27 @@ class _HomePageState extends State<HomePage> {
                                         text: '#' + currentUserPlace.toString(),
                                         icon: Icon(
                                           Icons.bar_chart,
-                                          size: 25,
+                                          size: 33,
+                                          color: Colors.black,
                                         ),
                                         options: FFButtonOptions(
                                           elevation: 0,
                                           width: 130,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .title1
-                                              .override(
-                                                fontFamily: 'Poppins',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                fontSize: 55,
-                                                fontWeight: FontWeight.w600,
-                                              ),
+                                          color: Color.fromARGB(
+                                            255,
+                                            241,
+                                            244,
+                                            248,
+                                          ),
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .title1
+                                                  .override(
+                                                    fontFamily: 'Poppins',
+                                                    color: Colors.black,
+                                                    fontSize: 42,
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
                                           borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1,
@@ -254,8 +253,7 @@ class _HomePageState extends State<HomePage> {
                                           .bodyText1
                                           .override(
                                             fontFamily: 'Poppins',
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
+                                            color: Colors.black,
                                             fontSize: 14,
                                             fontWeight: FontWeight.w300,
                                           ),
@@ -274,11 +272,11 @@ class _HomePageState extends State<HomePage> {
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 1.53,
                               height: 177,
@@ -287,8 +285,12 @@ class _HomePageState extends State<HomePage> {
                                 maxHeight: 177,
                               ),
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
+                                color: Color.fromARGB(
+                                  255,
+                                  241,
+                                  244,
+                                  248,
+                                ),
                                 borderRadius: BorderRadius.circular(34),
                               ),
                               child: Column(
@@ -311,21 +313,23 @@ class _HomePageState extends State<HomePage> {
                                       text: eventsJoined.toString(),
                                       icon: Icon(
                                         Icons.place,
-                                        size: 30,
+                                        size: 35,
                                       ),
                                       options: FFButtonOptions(
                                         elevation: 0,
                                         width: 130,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
+                                        color: Color.fromARGB(
+                                          255,
+                                          241,
+                                          244,
+                                          248,
+                                        ),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .title1
                                             .override(
                                               fontFamily: 'Poppins',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 55,
+                                              color: Colors.black,
+                                              fontSize: 50,
                                               fontWeight: FontWeight.w600,
                                             ),
                                         borderSide: BorderSide(
@@ -342,8 +346,7 @@ class _HomePageState extends State<HomePage> {
                                         .bodyText1
                                         .override(
                                           fontFamily: 'Poppins',
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
+                                          color: Colors.black,
                                           fontWeight: FontWeight.w300,
                                         ),
                                   ),
@@ -352,8 +355,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 1.53,
                               height: 177,
@@ -362,8 +364,12 @@ class _HomePageState extends State<HomePage> {
                                 maxHeight: 177,
                               ),
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
+                                color: Color.fromARGB(
+                                  255,
+                                  241,
+                                  244,
+                                  248,
+                                ),
                                 borderRadius: BorderRadius.circular(34),
                               ),
                               child: SingleChildScrollView(
@@ -387,24 +393,27 @@ class _HomePageState extends State<HomePage> {
                                         text: purchasedItemCount.toString(),
                                         icon: Icon(
                                           Icons.shopping_cart,
-                                          size: 25,
+                                          size: 33,
+                                          color: Colors.black,
                                         ),
                                         options: FFButtonOptions(
                                           elevation: 0,
                                           width: 130,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .title1
-                                              .override(
-                                                fontFamily: 'Poppins',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                fontSize: 55,
-                                                fontWeight: FontWeight.w600,
-                                              ),
+                                          color: Color.fromARGB(
+                                            255,
+                                            241,
+                                            244,
+                                            248,
+                                          ),
+                                          textStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .title1
+                                                  .override(
+                                                    fontFamily: 'Poppins',
+                                                    color: Colors.black,
+                                                    fontSize: 50,
+                                                    fontWeight: FontWeight.w600,
+                                                  ),
                                           borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1,
@@ -414,13 +423,12 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      'Item Purchased',
+                                      'Items Purchased',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText1
                                           .override(
                                             fontFamily: 'Poppins',
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
+                                            color: Colors.black,
                                             fontWeight: FontWeight.w300,
                                           ),
                                     ),
@@ -438,11 +446,11 @@ class _HomePageState extends State<HomePage> {
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 1.53,
                               height: 177,
@@ -451,8 +459,12 @@ class _HomePageState extends State<HomePage> {
                                 maxHeight: 177,
                               ),
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
+                                color: Color.fromARGB(
+                                  255,
+                                  241,
+                                  244,
+                                  248,
+                                ),
                                 borderRadius: BorderRadius.circular(34),
                               ),
                               child: Column(
@@ -460,7 +472,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 35, 5, 0),
+                                        0, 20, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
                                         await _helpMenuDialog(context);
@@ -468,13 +480,18 @@ class _HomePageState extends State<HomePage> {
                                       text: "",
                                       icon: Icon(
                                         Icons.question_mark_rounded,
-                                        size: 45,
+                                        size: 60,
+                                        color: Colors.black,
                                       ),
                                       options: FFButtonOptions(
                                         elevation: 0,
                                         width: 130,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
+                                        color: Color.fromARGB(
+                                          255,
+                                          241,
+                                          244,
+                                          248,
+                                        ),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .title1
                                             .override(
@@ -493,25 +510,26 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                   ),
-                                  Text(
-                                    'Help',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Poppins',
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w600,
-                                        ),
+                                  Padding(
+                                    padding: EdgeInsets.only(bottom: 15),
+                                    child: Text(
+                                      'Help',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: Colors.black,
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                    ),
                                   ),
                                 ],
                               ),
                             ),
                           ),
                           Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(25, 0, 0, 0),
+                            padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                             child: Container(
                               width: MediaQuery.of(context).size.width * 1.53,
                               height: 177,
@@ -520,8 +538,12 @@ class _HomePageState extends State<HomePage> {
                                 maxHeight: 177,
                               ),
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
+                                color: Color.fromARGB(
+                                  255,
+                                  241,
+                                  244,
+                                  248,
+                                ),
                                 borderRadius: BorderRadius.circular(34),
                               ),
                               child: Column(
@@ -529,21 +551,33 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 35, 5, 0),
+                                        0, 25, 0, 0),
                                     child: FFButtonWidget(
                                       onPressed: () {
-                                        print('Button pressed ...');
+                                        Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                UserStatsSettings(
+                                              currentUser: currentUser,
+                                            ),
+                                          ),
+                                        );
                                       },
                                       text: "",
                                       icon: Icon(
-                                        Icons.question_mark_rounded,
-                                        size: 45,
+                                        Icons.query_stats_sharp,
+                                        size: 60,
+                                        color: Colors.black,
                                       ),
                                       options: FFButtonOptions(
                                         elevation: 0,
                                         width: 130,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
+                                        color: Color.fromARGB(
+                                          255,
+                                          241,
+                                          244,
+                                          248,
+                                        ),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .title1
                                             .override(
@@ -562,17 +596,19 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                   ),
-                                  Text(
-                                    'View Statistics',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily: 'Poppins',
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600,
-                                        ),
+                                  Padding(
+                                    padding: EdgeInsets.only(bottom: 15),
+                                    child: Text(
+                                      'View Statistics',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            color: Colors.black,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                    ),
                                   ),
                                 ],
                               ),
@@ -613,6 +649,22 @@ class _HomePageState extends State<HomePage> {
                           height: 50,
                           color: Colors.purple,
                           child: Text('Browse',
+                              style: TextStyle(
+                                color: Colors.white,
+                              )))),
+                  InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (context) => HomePage(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                          width: 125,
+                          height: 50,
+                          color: Colors.purple,
+                          child: Text('Refresh Home',
                               style: TextStyle(
                                 color: Colors.white,
                               )))),
@@ -669,12 +721,12 @@ class _HomePageState extends State<HomePage> {
     } else {
       return Column(
         children: [
-          SizedBox(height: 50),
-          Align(
-            alignment: Alignment.topCenter,
+          Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.white,
             child: CircularProgressIndicator(
-              valueColor:
-                  AlwaysStoppedAnimation<Color>(Color.fromARGB(255, 0, 0, 0)),
+              color: Colors.black,
             ),
           ),
         ],
@@ -700,7 +752,8 @@ class _HomePageState extends State<HomePage> {
             ),
             content: SingleChildScrollView(
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * .8,
+                width: MediaQuery.of(context).size.width * .9,
+                height: MediaQuery.of(context).size.height * .8,
                 child: Column(
                   children: [
                     Text(

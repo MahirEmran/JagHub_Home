@@ -346,40 +346,40 @@ packages:
     source: hosted
     version: "2.0.1"
   mad2_browsepage:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: mad2_browsepage
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.7.9"
+    version: "1.8.0"
   mad2_db_dataobjects:
     dependency: "direct main"
     description:
       name: mad2_db_dataobjects
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.0"
+    version: "1.2.1"
   mad2_leaderboard:
     dependency: "direct main"
     description:
       name: mad2_leaderboard
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.8"
+    version: "1.3.2"
   mad2_login:
     dependency: "direct main"
     description:
       name: mad2_login
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.3"
+    version: "1.0.8"
   mad2_shop:
     dependency: "direct main"
     description:
       name: mad2_shop
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.8"
+    version: "1.2.9"
   matcher:
     dependency: transitive
     description:

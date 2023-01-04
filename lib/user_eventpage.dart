@@ -47,7 +47,7 @@ class _UserEventPageState extends State<UserEventPage> {
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(8, 10, 0, 0),
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
