@@ -22,7 +22,7 @@ dependencies:
   mad2_db_dataobjects: ^1.2.1
   mad2_leaderboard: ^1.3.2
   mad2_shop: ^1.2.9
-  mad2_login: ^1.0.8
+  mad2_login: ^1.0.9
   mad2_browsepage: ^1.8.0
 
   auto_size_text: 3.0.0
