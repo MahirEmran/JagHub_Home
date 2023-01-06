@@ -636,57 +636,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   SizedBox(height: 10),
-                  InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => ShopPage(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                          width: 125,
-                          height: 50,
-                          color: Colors.purple,
-                          child: Text('Shop',
-                              style: TextStyle(
-                                color: Colors.white,
-                              )))),
-                  SizedBox(height: 5),
-                  InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => BrowsePage(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                          width: 125,
-                          height: 50,
-                          color: Colors.purple,
-                          child: Text('Browse',
-                              style: TextStyle(
-                                color: Colors.white,
-                              )))),
-                  SizedBox(height: 5),
-                  InkWell(
-                      onTap: () {
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (context) => HomePage(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                          width: 125,
-                          height: 50,
-                          color: Colors.purple,
-                          child: Text('Refresh Home',
-                              style: TextStyle(
-                                color: Colors.white,
-                              )))),
-                  SizedBox(height: 10),
                   _isSigningOut
                       ? CircularProgressIndicator(
                           valueColor:
