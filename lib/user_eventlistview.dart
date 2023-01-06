@@ -17,7 +17,7 @@ class _UserEventListViewState extends State<UserEventListView> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   late UserData userInfo;
-  late List<EventData> userEvents;
+  late List<EventData> userEvents = [];
   late List<Widget> eventWidgetList = [];
   bool dataLoaded = false;
   late Widget body;
@@ -32,110 +32,116 @@ class _UserEventListViewState extends State<UserEventListView> {
     API().getEvents(userInfo.currentEvents).then(
       (value) {
         userEvents = value;
-        for (EventData event in userEvents)
-          (event) {
-            eventWidgetList.add(
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 0),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => UserEventPage(
-                          event: event,
-                        ),
+        print(userEvents.length);
+        print(userEvents.length);
+        print(userEvents.length);
+        print(userEvents.length);
+        print(userEvents.length);
+        print(userEvents);
+        for (int i = 0; i < userEvents.length; i++) {
+          eventWidgetList.add(
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 0),
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => UserEventPage(
+                        event: userEvents[i],
                       ),
-                    );
-                  },
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              ListTile(
-                                title: Text(
-                                  event.title,
-                                  style: TextStyle(
-                                    fontFamily: 'Montserrat',
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                ),
-                                subtitle: Text(
-                                  event.date +
-                                      ", " +
-                                      event.time +
-                                      ", @" +
-                                      event.location +
-                                      ", from " +
-                                      event.source,
-                                  style: TextStyle(
-                                    fontFamily: 'Montserrat',
-                                    color: Color.fromARGB(255, 52, 51, 51),
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                tileColor: Color(0xFFF5F5F5),
-                                dense: false,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                    ),
+                  );
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
-                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Container(
-                              width: 85,
-                              height: 40,
-                              decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 75, 57, 239),
-                                borderRadius: BorderRadius.circular(20),
+                            ListTile(
+                              title: Text(
+                                userEvents[i].title,
+                                style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  color: Colors.black,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700,
+                                ),
                               ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 5, 0),
-                                    child: Icon(
-                                      Icons.star_rounded,
-                                      color: Colors.white,
-                                      size: 25,
-                                    ),
-                                  ),
-                                  Text(
-                                    event.pointReward.toString(),
-                                    style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
+                              subtitle: Text(
+                                userEvents[i].date +
+                                    ", " +
+                                    userEvents[i].time +
+                                    ", @" +
+                                    userEvents[i].location +
+                                    ", from " +
+                                    userEvents[i].source,
+                                style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  color: Color.fromARGB(255, 52, 51, 51),
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
+                              tileColor: Color(0xFFF5F5F5),
+                              dense: false,
                             ),
                           ],
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Container(
+                            width: 85,
+                            height: 40,
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 75, 57, 239),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 5, 0),
+                                  child: Icon(
+                                    Icons.star_rounded,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
+                                ),
+                                Text(
+                                  userEvents[i].pointReward.toString(),
+                                  style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            );
-          };
+            ),
+          );
+        }
+        ;
         if (eventWidgetList.length > 0) {
           body = Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0, 15, 0, 0),

@@ -107,17 +107,32 @@ class _HomePageState extends State<HomePage> {
                                   ),
                             ),
                           ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(30, 5, 0, 0),
-                            child: Text(
-                              currentUser.name,
-                              style:
-                                  FlutterFlowTheme.of(context).title1.override(
-                                        fontFamily: 'Poppins',
-                                        fontSize: 34,
-                                        color: Colors.black,
-                                      ),
+                          Container(
+                            width: MediaQuery.of(context).size.width * .6,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      30, 5, 0, 0),
+                                  child: FittedBox(
+                                    alignment: Alignment.topLeft,
+                                    fit: BoxFit.scaleDown,
+                                    child: Text(
+                                      currentUser.name,
+                                      maxLines: 1,
+                                      style: FlutterFlowTheme.of(context)
+                                          .title1
+                                          .override(
+                                            fontFamily: 'Poppins',
+                                            fontSize: 34,
+                                            color: Colors.black,
+                                          ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
@@ -159,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                                       text: currentUser.points.toString(),
                                       icon: Icon(
                                         Icons.star_rounded,
-                                        size: 30,
+                                        size: 28,
                                         color: Colors.white,
                                       ),
                                       options: FFButtonOptions(
@@ -171,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                                             .override(
                                               fontFamily: 'Poppins',
                                               color: Colors.white,
-                                              fontSize: 55,
+                                              fontSize: 48,
                                               fontWeight: FontWeight.w600,
                                             ),
                                         borderSide: BorderSide(
@@ -680,6 +695,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
+                  SizedBox(height: 25),
                 ],
               ),
             ),
