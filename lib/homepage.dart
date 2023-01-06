@@ -84,28 +84,45 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(30, 40, 0, 0),
-                    child: Text(
-                      'Welcome Back',
-                      style: FlutterFlowTheme.of(context).subtitle2.override(
-                            fontFamily: 'Poppins',
-                            fontSize: 18,
-                            fontWeight: FontWeight.w200,
-                            color: Colors.black,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(30, 40, 0, 0),
+                            child: Text(
+                              'Welcome Back',
+                              style: FlutterFlowTheme.of(context)
+                                  .subtitle2
+                                  .override(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w200,
+                                    color: Colors.black,
+                                  ),
+                            ),
                           ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
-                    child: Text(
-                      currentUser.name,
-                      style: FlutterFlowTheme.of(context).title1.override(
-                            fontFamily: 'Poppins',
-                            fontSize: 34,
-                            color: Colors.black,
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(30, 5, 0, 0),
+                            child: Text(
+                              currentUser.name,
+                              style:
+                                  FlutterFlowTheme.of(context).title1.override(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 34,
+                                        color: Colors.black,
+                                      ),
+                            ),
                           ),
-                    ),
+                        ],
+                      )
+                    ],
                   ),
                   Align(
                     alignment: AlignmentDirectional(0, 0),
@@ -652,6 +669,7 @@ class _HomePageState extends State<HomePage> {
                               style: TextStyle(
                                 color: Colors.white,
                               )))),
+                  SizedBox(height: 5),
                   InkWell(
                       onTap: () {
                         Navigator.of(context).pushReplacement(
@@ -668,6 +686,7 @@ class _HomePageState extends State<HomePage> {
                               style: TextStyle(
                                 color: Colors.white,
                               )))),
+                  SizedBox(height: 10),
                   _isSigningOut
                       ? CircularProgressIndicator(
                           valueColor:
@@ -725,8 +744,14 @@ class _HomePageState extends State<HomePage> {
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             color: Colors.white,
-            child: CircularProgressIndicator(
-              color: Colors.black,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircularProgressIndicator(
+                  color: Colors.black,
+                ),
+              ],
             ),
           ),
         ],
