@@ -746,18 +746,11 @@ class _HomePageState extends State<HomePage> {
                 width: MediaQuery.of(context).size.width * .9,
                 height: MediaQuery.of(context).size.height * .8,
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Welcome to JagHub!',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        fontWeight: FontWeight.w300,
-                        fontFamily: 'Montserrat',
-                      ),
-                    ),
-                    Text(
-                      'placehodlder',
+                      'Welcome to JagHub!\nJagHub is an app where YOU can earn points for attending events and showing your true jaguar spirit by showing up.\n\n With your points, you can buy several rewards in the shop - provided by our very own student store!\n\nYou will be able to see your purchased items and events you have attended through the home screen. You can also view a report of your statistics through the "View Statistics" button.\n\nThere is also the browse page where you can find events to join, along with groups. The opportunities page can also help you find what to attend next!\n\nNow go out there and rack up points to get on top of the leaderboard!',
                       style: TextStyle(
                         fontSize: 14,
                         color: Color.fromARGB(255, 0, 0, 0),
@@ -781,7 +774,7 @@ class _HomePageState extends State<HomePage> {
                         elevation: 2,
                         backgroundColor: Color.fromARGB(255, 76, 56, 239),
                       ),
-                      child: Text('Ok'),
+                      child: Text('OK'),
                       onPressed: () {
                         setState(() {
                           okPressed = true;
