@@ -175,7 +175,7 @@ class _HomePageState extends State<HomePage> {
                                       text: currentUser.points.toString(),
                                       icon: Icon(
                                         Icons.star_rounded,
-                                        size: 28,
+                                        size: 24,
                                         color: Colors.white,
                                       ),
                                       options: FFButtonOptions(
@@ -187,7 +187,7 @@ class _HomePageState extends State<HomePage> {
                                             .override(
                                               fontFamily: 'Poppins',
                                               color: Colors.white,
-                                              fontSize: 48,
+                                              fontSize: 24,
                                               fontWeight: FontWeight.w600,
                                             ),
                                         borderSide: BorderSide(
@@ -269,7 +269,7 @@ class _HomePageState extends State<HomePage> {
                                                   .override(
                                                     fontFamily: 'Poppins',
                                                     color: Colors.black,
-                                                    fontSize: 42,
+                                                    fontSize: 36,
                                                     fontWeight: FontWeight.w600,
                                                   ),
                                           borderSide: BorderSide(
