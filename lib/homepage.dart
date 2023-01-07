@@ -108,14 +108,15 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Container(
-                            width: MediaQuery.of(context).size.width * .6,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
+                            width: MediaQuery.of(context).size.width * .75,
+                            height: 60,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      30, 5, 0, 0),
+                                      30, 0, 0, 0),
                                   child: FittedBox(
                                     alignment: Alignment.topLeft,
                                     fit: BoxFit.scaleDown,
@@ -126,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                                           .title1
                                           .override(
                                             fontFamily: 'Poppins',
-                                            fontSize: 34,
+                                            fontSize: 32,
                                             color: Colors.black,
                                           ),
                                     ),
